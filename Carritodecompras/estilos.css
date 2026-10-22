@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #eef2f7;
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px;
+  display: grid;
+  place-items: center;
+  color: #1e293b;
+}
+
+.contenedor {
+  width: min(100%, 920px);
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.10);
+}
+
+.encabezado {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.encabezado h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+
+.encabezado p {
+  margin: 0;
+  color: #64748b;
+  font-size: 15px;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.producto {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.producto h2 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.precio {
+  margin: 0 0 14px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2458a6;
+}
+
+button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #2458a6;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #1d4a8c;
+}
+
+button.secundario {
+  background: #64748b;
+}
+
+button.secundario:hover {
+  background: #526071;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.producto button {
+  width: 100%;
+}
+
+.resumen {
+  margin-top: 22px;
+  padding: 20px;
+  border-radius: 14px;
+  background: #f8fafc;
+}
+
+.resumen h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+}
+
+.linea {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 15px;
+}
+
+.linea.total {
+  margin-top: 6px;
+  padding-top: 14px;
+  border-top: 2px solid #2458a6;
+  border-bottom: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.campo {
+  display: grid;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: 2px solid #2458a6;
+  outline-offset: 1px;
+}
+
+.ayuda {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.mensaje {
+  min-height: 20px;
+  margin: 12px 0 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .productos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .contenedor {
+    padding: 20px;
+  }
+
+  .productos {
+    grid-template-columns: 1fr;
+  }
+
+  .acciones {
+    display: grid;
+  }
+}

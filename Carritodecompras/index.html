@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taller: caja registradora</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="contenedor">
+    <header class="encabezado">
+      <h1>Caja registradora</h1>
+      <p>Agrega productos, aplica el descuento y cobra la compra.</p>
+    </header>
+
+    <section class="productos" aria-label="Productos disponibles">
+      <article class="producto">
+        <h2>Mouse</h2>
+        <p class="precio">$60</p>
+        <button id="mouse" type="button" aria-label="Agregar mouse">Agregar</button>
+      </article>
+
+      <article class="producto">
+        <h2>Teclado</h2>
+        <p class="precio">$120</p>
+        <button id="teclado" type="button" aria-label="Agregar teclado">Agregar</button>
+      </article>
+
+      <article class="producto">
+        <h2>Monitor</h2>
+        <p class="precio">$800</p>
+        <button id="monitor" type="button" aria-label="Agregar monitor">Agregar</button>
+      </article>
+
+      <article class="producto">
+        <h2>Audífonos</h2>
+        <p class="precio">$160</p>
+        <button id="audifonos" type="button" aria-label="Agregar audífonos">Agregar</button>
+      </article>
+    </section>
+
+    <section class="resumen" aria-label="Resumen de la compra">
+      <h2>Resumen de la compra</h2>
+
+      <div class="linea">
+        <span>Productos</span>
+        <strong id="cantidad">0</strong>
+      </div>
+
+      <div class="linea">
+        <span>Subtotal</span>
+        <strong id="subtotal">$0</strong>
+      </div>
+
+      <div class="linea">
+        <span>Descuento</span>
+        <strong id="descuento">$0</strong>
+      </div>
+
+      <div class="linea total">
+        <span>Total a pagar</span>
+        <strong id="total">$0</strong>
+      </div>
+
+      <div class="campo">
+        <label for="codigo">Código de descuento (opcional)</label>
+        <input id="codigo" type="text" placeholder="Ej.: WEB10" autocomplete="off">
+        <p class="ayuda">El código WEB10 aplica un 10% adicional al descuento.</p>
+      </div>
+
+      <div class="acciones">
+        <button id="pagar" type="button" disabled>Pagar</button>
+        <button id="reiniciar" class="secundario" type="button">Nueva compra</button>
+      </div>
+
+      <p id="mensaje" class="mensaje" aria-live="polite">Agrega productos para empezar.</p>
+    </section>
+  </main>
+</body>
+</html>
